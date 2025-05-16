@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username" required>
+        <input type="text" name="email" placeholder="email" required>
+        <input type="text" name="fullname" placeholder="fullname" required>
+        <input type="number" name="phonenumber" placeholder="phonenumber" min="10" required>
+        <input type="text" name="password" placeholder="password" required>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
